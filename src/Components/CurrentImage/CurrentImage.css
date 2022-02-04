@@ -1,8 +1,9 @@
 .current-image {
-    width: 70vw;
+    width: 85vw;
     height: 50vh;
 }
 
 .current-image img {
     width: 100%;
+    border-radius: 15px;
 }
