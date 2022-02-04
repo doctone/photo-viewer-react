@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export function PhotoViewer({imageurl, alt}){
-    // const [image, setImage] = useState('Please select an image');
+export function PhotoViewer({imageUrl, alt, setImage}){
     return (
-        <div>
-            <img src={imageurl} alt={alt} />
+        <div className="image-thumbnail">
+            <img src={imageUrl} alt={alt} onClick={() => {setImage(imageUrl)}}/>
         </div>
     )
 }
