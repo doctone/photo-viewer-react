@@ -2,9 +2,8 @@ import React from "react";
 import './Random.css'
 
 export function RandomImage({images, setImage}){
-    const numberOfImages = images.length;
     return (
-        <div>
+        <div className="random-button">
             <button onClick={() => setImage(images[Math.floor(Math.random()*images.length)])}>Select Random Image</button>
         </div>
     )
