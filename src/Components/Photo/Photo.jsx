@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
 
-export function PhotoViewer({imageUrl, alt, setImage}){
+export function Photo({imageUrl, alt, setImage}){
     const [isActive, setActive] = useState('false');
-
     const toggleClass = () => {
         setActive(!isActive);
     };

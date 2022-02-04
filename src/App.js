@@ -1,13 +1,13 @@
 import './App.css';
 import { Title } from './Components/Title/Title';
-import { PhotoViewer } from './Components/PhotoViewer/PhotoViewer';
+import { Photo } from './Components/Photo/Photo';
 import { imageUrls } from './images';
 import { useState } from 'react';
 import { CurrentImage } from './Components/CurrentImage/CurrentImage';
 import { RandomImage } from './Components/RandomImage/RandomImage';
 
 function App() {
-  const [image, setImage] = useState('Please select an image');
+  const [image, setImage] = useState(imageUrls[Math.floor(Math.random()*imageUrls.length)]);
 
   return (
     <div className="App">
@@ -18,8 +18,8 @@ function App() {
       </header>
       <h3>URL of selected image: {image} </h3>
       <main className="photo-container">
-      { imageUrls.map(imageUrl => (
-            <PhotoViewer imageUrl = {imageUrl} setImage={setImage}/>
+      { imageUrls.map((imageUrl, index) => (
+            <Photo imageUrl = {imageUrl} setImage={setImage} previousImage={image} key={index}/>
         ))};
       </main>
     </div>
