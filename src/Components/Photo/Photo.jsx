@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './Photo.css';
 
 
-export function Photo({imageUrl, alt, setImage}){
-    const [isActive, setActive] = useState('false');
-    const toggleClass = () => {
-        setActive(!isActive);
-    };
+export function Photo({imageUrl, alt, setImage, currentImage}){
+
     return (
-        <div className={!isActive ? 'clicked-image image-thumbnail' : 'image-thumbnail'}>
-            <img src={imageUrl} alt={alt} onClick={() => {
-                toggleClass();
-                setImage(imageUrl);
-                }}/>
+        <div className={`image-thumbnail ${imageUrl === currentImage ? "selected" : "" }`}>
+            <img src={imageUrl} alt={alt} onClick={() => {setImage(imageUrl)}}/>
         </div>
     )
 }
