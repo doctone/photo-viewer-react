@@ -1,6 +1,6 @@
 .current-image {
     width: 85vw;
-    height: 50vh;
+    overflow: hidden;
 }
 
 .current-image img {
