@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Title />
-        <CurrentImage currentImage={image} image2={image2} setUrl={setUrl}/>
+        <CurrentImage currentImage={image} image2={image2} setUrl={setUrl} setImage={setImage} setImage2={setImage2} images={imageUrls}/>
         <RandomImage setImage={setImage} setImage2={setImage2} images={imageUrls}/>
       </header>
       <section className='title'>
