@@ -18,7 +18,7 @@ function App() {
         <RandomImage setImage={setImage} setImage2={setImage2} images={imageUrls}/>
       </header>
       <h3>URL of selected image: {image} </h3>
-      <PhotoViewer imageUrls={imageUrls} setImage={setImage} currentImage={image} image2={image2}/>
+      <PhotoViewer imageUrls={imageUrls} setImage={setImage} setImage2={setImage2} currentImage={image} image2={image2}/>
     </div>
   );
 }
